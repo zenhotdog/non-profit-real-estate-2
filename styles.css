@@ -1,0 +1,84 @@
+/* Headlines */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  color: #000000;
+}
+
+/* Header */
+header {
+  background-color: #61777F;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Body Text */
+body {
+  font-family: Arial, sans-serif;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+/* Background */
+body {
+  background-color: #ffffff;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: 8px 12px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #FFFFFF;
+}
+
+/* Footer */
+footer {
+  background-color: #61777F;
+  padding: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+/* Anchor Links */
+a:link {
+  color: #000000;
+}
+
+a:visited {
+  color: #666666;
+}
+
+a:hover {
+  color: #FF0000;
+}
+
+a:active {
+  color: #0000FF;
+  border: 2px solid #FFFFFF;  /* Adds a white border */
+}
