@@ -101,8 +101,8 @@ main {
   padding: 20px;
   margin-right: 10px;  /* Add horizontal spacing */
   margin-bottom: 10px;  /* Add vertical spacing */
-  max-width: 600px;  /* Set a max-width */
-  max-height: 600px;  /* Set a max-height */
+  max-width: 400px;  /* Set a max-width */
+  max-height: 400px;  /* Set a max-height */
   width: auto;
   height: auto;
   object-fit: contain;  /* Ensures the aspect ratio is maintained */
