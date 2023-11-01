@@ -1,26 +1,38 @@
 <!-- 
     Name: Christopher Cullen
-    Date: 10-27-2023
+    Date: 11-1-2023
     File Name: ourgallery.html
-    Description: This page serves as the homepage for Non-profit Real Estate Inc. It includes the organization name and logo (logo placeholder), a navigation menu with links to all site pages, and a section introducing the organization.
+    Description: This page serves as the 'Gallery' page for Non-Profit Real Estate Brokerage, Inc. It includes a dynamic-width column layout for images.
 -->
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Non-profit Real Estate Inc. - Home</title>
+    <title>Non-Profit Real Estate Brokerage, Inc. - Gallery</title>
+    <style>
+      /* Developer Comment: Dynamic-width Columns */
+      .dynamic-columns {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .column {
+        flex: 1;
+        padding: 20px;
+      }
+    </style>
   </head>
   <body>
     <!-- Developer Comment: Header Section -->
     <header>
       <img src="black-transparent-logo.png" alt="Logo goes here" width="400" height="100">
-      <h1>Non-profit Real Estate Inc.</h1>
-      <h2>We are a Southern Maryland based not-for-profit Real Estate Brokerage.</h2>
+      <h1>Non-Profit Real Estate Brokerage, Inc.</h1>
+      <h2>We are a Southern Maryland-based not-for-profit Real Estate Brokerage.</h2>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-      	  <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
           <li><a href="ourservices.html">Services Provided</a></li>
           <li><a href="ourgallery.html">Gallery</a></li>
           <li><a href="contactus.html">Contact</a></li>
@@ -30,10 +42,16 @@
     
     <!-- Developer Comment: Main Content Section -->
     <main>
-      <section>
-        <article>
-          <h1>This is where we showcase our listings to the public</h1>
-        </article>
+      <section class="dynamic-columns">
+        <!-- Developer Comment: Dynamic Column 1 -->
+        <div class="gallery-column">
+          <img src="house1.jpg" alt="Gallery Image 1">
+        </div>
+        
+        <!-- Developer Comment: Dynamic Column 2 -->
+        <div class="gallery-column">
+          <img src="house2.jpg" alt="Gallery Image 2">
+        </div>
       </section>
     </main>
     
@@ -45,10 +63,9 @@
         </ul>
       </nav>
       <div>
-        <h2>123 Main Street Maryland City, MD 90210</h2>
+        <h2>123 Main Street, Maryland City, MD 90210</h2>
       </div>
-      <p>&copy; 2023 Non-profit Real Estate Inc.</p>
+      <p>&copy; 2023 Non-Profit Real Estate Brokerage, Inc.</p>
     </footer>
   </body>
 </html>
-
