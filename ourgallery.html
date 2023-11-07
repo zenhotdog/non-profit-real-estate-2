@@ -1,34 +1,21 @@
 <!-- 
     Name: Christopher Cullen
-    Date: 11-1-2023
+    Date: 11-6-2023
     File Name: ourgallery.html
-    Description: This page serves as the 'Gallery' page for Non-Profit Real Estate Brokerage, Inc. It includes a dynamic-width column layout for images.
+    Description: Gallery page for Non-Profit Real Estate Brokerage, Inc.
 -->
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Non-Profit Real Estate Brokerage, Inc. - Gallery</title>
-    <style>
-      /* Developer Comment: Dynamic-width Columns */
-      .dynamic-columns {
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      .column {
-        flex: 1;
-        padding: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Developer Comment: Header Section -->
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Our Gallery | Non-Profit Real Estate Brokerage, Inc.</title>
+</head>
+<body>
     <header>
-      <img src="black-transparent-logo.png" alt="Logo goes here" width="400" height="100">
-      <h1>Non-Profit Real Estate Brokerage, Inc.</h1>
-      <h2>We are a Southern Maryland-based not-for-profit Real Estate Brokerage.</h2>
+        <img src="black-transparent-logo.png" alt="Logo goes here" width="400" height="100">
+        <h1>Our Gallery</h1>
+      <h2>We are a Southern Maryland based not-for-profit Real Estate Brokerage.</h2>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -39,33 +26,57 @@
         </ul>
       </nav>
     </header>
-    
-    <!-- Developer Comment: Main Content Section -->
+
     <main>
-      <section class="dynamic-columns">
-        <!-- Developer Comment: Dynamic Column 1 -->
-        <div class="gallery-column">
-          <img src="house1.jpg" alt="Gallery Image 1">
+         <div class="image-gallery">
+            <a href="#img1" class="thumbnail" onclick="openPopup('popup1')">
+                <img src="house1.jpg" alt="House 1" class="gallery-thumbnail">
+            </a>
+            <a href="#img2" class="thumbnail" onclick="openPopup('popup2')">
+                <img src="house2.jpg" alt="House 2" class="gallery-thumbnail">
+            </a>
+            <a href="#img3" class="thumbnail" onclick="openPopup('popup3')">
+                <img src="house3.jpg" alt="House 3" class="gallery-thumbnail">
+            </a>
+            <!-- The Pop-up -->
+            <div id="popup1" class="popup">
+                <span class="close" onclick="closePopup('popup1')">&times;</span>
+                <img src="house1.jpg" alt="House 1" class="popup-img">
+            </div>
+            <div id="popup2" class="popup">
+                <span class="close" onclick="closePopup('popup2')">&times;</span>
+                <img src="house2.jpg" alt="House 2" class="popup-img">
+            </div>
+            <div id="popup3" class="popup">
+                <span class="close" onclick="closePopup('popup3')">&times;</span>
+                <img src="house3.jpg" alt="House 3" class="popup-img">
+            </div>
         </div>
-        
-        <!-- Developer Comment: Dynamic Column 2 -->
-        <div class="gallery-column">
-          <img src="house2.jpg" alt="Gallery Image 2">
-        </div>
-      </section>
     </main>
-    
-    <!-- Developer Comment: Footer Section -->
+
     <footer>
-      <nav>
-        <ul>
-          <li><a href="contactus.html">Contact Us</a></li>
-        </ul>
-      </nav>
-      <div>
-        <h2>123 Main Street, Maryland City, MD 90210</h2>
-      </div>
-      <p>&copy; 2023 Non-Profit Real Estate Brokerage, Inc.</p>
+        <p>© 2023 Non-Profit Real Estate Brokerage, Inc. | All rights reserved</p>
     </footer>
-  </body>
+
+    <script>
+    // Function to open the popup
+    function openPopup(popupId) {
+        // Close all open pop-ups first
+        var popups = document.querySelectorAll('.popup');
+        for (var i = 0; i < popups.length; i++) {
+            popups[i].style.display = 'none';
+        }
+        // Open the requested popup
+        document.getElementById(popupId).style.display = 'block';
+    }
+
+    // Function to close the popup
+    function closePopup(popupId) {
+        document.getElementById(popupId).style.display = 'none';
+    }
+</script>
+
+
+</body>
 </html>
+
