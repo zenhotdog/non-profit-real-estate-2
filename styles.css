@@ -142,3 +142,7 @@ iframe {
     height: auto;
   }
 }
+.youtube-video {
+  border: 0; /* This removes the border */
+  /* If you need a border, use something like 'border: 1px solid #000;' */
+}
